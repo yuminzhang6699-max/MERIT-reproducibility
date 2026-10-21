@@ -1,0 +1,14 @@
+{
+  "source": "pack_final_benchmark.py",
+  "seed": 42,
+  "path_semantics": "Windows ntpath, CRLF text mode",
+  "raw_qa_records": 1716,
+  "test_records": 1716,
+  "unique_raw_ids": 1716,
+  "unique_test_ids": 1716,
+  "same_record_ids": true,
+  "exact_record_sequence_equal": true,
+  "exact_bytes_equal": true,
+  "published_test_sha256": "2fc190c0b6b9fae57a22bff39493d0c69cebc59dae8a1abf227a7939dc5b3cdd",
+  "repacked_test_sha256": "2fc190c0b6b9fae57a22bff39493d0c69cebc59dae8a1abf227a7939dc5b3cdd"
+}

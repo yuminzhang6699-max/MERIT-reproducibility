@@ -1,0 +1,17 @@
+{
+  "generated": 1716,
+  "skipped": 0,
+  "errors": 0,
+  "lengths": [
+    1000,
+    3000,
+    5000,
+    10000
+  ],
+  "seeds": [
+    42,
+    123,
+    789
+  ],
+  "scenario_count": 143
+}

@@ -1,0 +1,32 @@
+{
+  "release_id": "longts-industrial-pinned-20260618",
+  "source_code_revision": "a0a4d3dbf8022222387c5ee421626ba0d7836633",
+  "dataset_repository": "ANTICH/LongTS-Industrial",
+  "dataset_revision": "833586d18a6a207464944dc41de6dba007f3b862",
+  "test_path": "LongTS_Industrial/test.jsonl",
+  "test_sha256": "2fc190c0b6b9fae57a22bff39493d0c69cebc59dae8a1abf227a7939dc5b3cdd",
+  "canonical_records_sha256": "743842158f516163d7570ba174dbbb1d8f8e6efbf9e9e43c962652d6acbba40c",
+  "n_samples": 1716,
+  "n_qa": 8412,
+  "split_policy": "unified_test_only",
+  "index_base": 0,
+  "event_interval": "half_open_start_inclusive_end_exclusive",
+  "n_samples_values": [
+    1001,
+    3001,
+    5001,
+    10001
+  ],
+  "n_intervals_values": [
+    1000,
+    3000,
+    5000,
+    10000
+  ],
+  "seed_values": [
+    42,
+    123,
+    789
+  ],
+  "provenance": "Generation, metadata, prompts and split definitions extracted from the pinned public implementation."
+}

@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Fixed LongTS-Industrial test record",
+  "description": "Observed dataset revision 833586d18a6a207464944dc41de6dba007f3b862. Cross-field constraints are checked by verify.py.",
+  "type": "object",
+  "required": ["id", "domain", "source", "scenario_id", "metadata", "timeseries_path", "ground_truth_events", "qa_pairs"],
+  "additionalProperties": false,
+  "$defs": {
+    "interval": {
+      "type": "array",
+      "description": "Zero-based half-open interval [start,end).",
+      "prefixItems": [{"type": "integer", "minimum": 0}, {"type": "integer", "minimum": 0}],
+      "items": false,
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "strings": {"type": "array", "items": {"type": "string"}}
+  },
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "domain": {"enum": ["coal_mill", "pump", "transformer", "wind_turbine"]},
+    "source": {"const": "synthetic"},
+    "scenario_id": {"type": "string"},
+    "timeseries_path": {"type": "string"},
+    "metadata": {
+      "type": "object",
+      "required": ["total_length", "n_channels", "sampling_rate", "difficulty", "needle_ratio"],
+      "additionalProperties": false,
+      "properties": {
+        "total_length": {"enum": [1001, 3001, 5001, 10001], "description": "Actual sample count N; difficulty uses L=N-1 intervals."},
+        "n_channels": {"enum": [7, 8]},
+        "sampling_rate": {"type": "string"},
+        "difficulty": {"enum": ["easy", "medium", "hard", "expert"]},
+        "needle_ratio": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    },
+    "ground_truth_events": {
+      "type": "array",
+      "maxItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["type", "range", "severity", "affected_channels", "causal_chain"],
+        "additionalProperties": false,
+        "properties": {
+          "type": {"type": "string"},
+          "range": {"$ref": "#/$defs/interval"},
+          "severity": {"enum": ["mild", "moderate", "severe"]},
+          "affected_channels": {"$ref": "#/$defs/strings"},
+          "causal_chain": {"$ref": "#/$defs/strings"}
+        }
+      }
+    },
+    "qa_pairs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["level", "question", "answer", "reasoning_chain", "required_interval"],
+        "additionalProperties": false,
+        "properties": {
+          "level": {"enum": ["L1", "L2", "L3", "L4"]},
+          "question": {"type": "string"},
+          "answer": {"type": "string"},
+          "reasoning_chain": {"$ref": "#/$defs/strings"},
+          "required_interval": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/interval"}]}
+        }
+      }
+    }
+  }
+}

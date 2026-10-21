@@ -1,0 +1,51 @@
+{
+  "n_samples": 1716,
+  "n_unique_ids": 1716,
+  "n_qa": 8412,
+  "by_domain_samples": {
+    "wind_turbine": 396,
+    "coal_mill": 576,
+    "transformer": 372,
+    "pump": 372
+  },
+  "by_domain_qa": {
+    "coal_mill": 2832,
+    "pump": 1836,
+    "transformer": 1836,
+    "wind_turbine": 1908
+  },
+  "by_level": {
+    "L1": 1716,
+    "L2": 1716,
+    "L4": 1716,
+    "L3": 3264
+  },
+  "by_difficulty": {
+    "expert": 450,
+    "easy": 429,
+    "hard": 429,
+    "medium": 408
+  },
+  "by_actual_n_samples": {
+    "5001": 429,
+    "1001": 429,
+    "10001": 429,
+    "3001": 429
+  },
+  "by_fault_ratio": {
+    "0.0": 84,
+    "0.2": 1620,
+    "1.0": 12
+  },
+  "source": {
+    "synthetic": 1716
+  },
+  "difficulty_mismatches_using_L_equals_N_minus_1": [],
+  "original_resume_key_collisions": {},
+  "expected_asset_references": 6864,
+  "missing_asset_references": [],
+  "split_paths_in_pinned_tree": [
+    "LongTS_Industrial/test.jsonl"
+  ],
+  "asset_validation_scope": "all referenced paths inventoried against pinned remote tree; file contents only checked for separately downloaded samples"
+}

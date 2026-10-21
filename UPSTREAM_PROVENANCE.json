@@ -1,0 +1,12 @@
+{
+  "original_repository": "https://github.com/ctacyk/MERIT",
+  "source_commit": "a0a4d3dbf8022222387c5ee421626ba0d7836633",
+  "dataset_repository": "ANTICH/LongTS-Industrial",
+  "dataset_revision": "833586d18a6a207464944dc41de6dba007f3b862",
+  "supplement_prepared": "2026-10-21",
+  "changes": [
+    "new reproducibility documentation/schema/helpers",
+    "supplement-specific README; upstream READMEs preserved"
+  ],
+  "original_data_or_result_modification": false
+}
