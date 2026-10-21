@@ -19,13 +19,13 @@ This specification describes the released JSONL and the existing code structures
 
 | Field | Type | Meaning |
 | --- | --- | --- |
-| `total_length` | integer | Actual number of observations N; {1001,3001,5001,10001} |
-| `n_channels` | integer | 7 for coal mill/transformer; 8 for pump/wind turbine |
+| `total_length` | integer | Actual number of observations T; {1001,3001,5001,10001} |
+| `n_channels` | integer | Number of sensors N; 7 for coal mill/transformer; 8 for pump/wind turbine |
 | `sampling_rate` | string | Sampling interval with its unit |
-| `difficulty` | string | Easy/Medium/Hard/Expert encoded lowercase; computed using L=N−1 |
+| `difficulty` | string | Easy/Medium/Hard/Expert encoded lowercase; computed using L=T−1 |
 | `needle_ratio` | number | Recorded event-span ratio Σ(end−start)/L; current values are 0, 0.2, 1 |
 
-The original generator argument and CSV filename `_L1000` refer to the interval count L, whereas saved `total_length=1001` refers to N. See [length and difficulty definitions](SPLITS_AND_DIFFICULTY.md). A future data format can introduce explicit `n_samples` / `n_intervals`; the fixed release is left unchanged here.
+The original generator argument and CSV filename `_L1000` refer to the interval count L, whereas saved `total_length=1001` refers to T. See [length and difficulty definitions](SPLITS_AND_DIFFICULTY.md). A future data format can introduce explicit `n_samples` / `n_intervals`; the fixed release is left unchanged here.
 
 ## Event record in `ground_truth_events`
 

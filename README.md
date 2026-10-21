@@ -30,7 +30,7 @@ The helpers use the Python standard library to download the fixed public files, 
 
 ## Clarifications
 
-The release has one test split: 1716 series and 8412 QA. The generator interval count L is 1000/3000/5000/10000; inclusion of both timestamp endpoints produces N=L+1 observations. Difficulty uses L while the saved total_length stores N. Event ranges follow zero-based [start,end).
+The release has one test split: 1716 series and 8412 QA. The generator interval count L is 1000/3000/5000/10000; inclusion of both timestamp endpoints produces T=L+1 observations. Difficulty uses L while the saved total_length stores T. Event ranges follow zero-based [start,end).
 
 The released source QA reproduces the published test byte-for-byte with the documented seed, path conventions and newline format.
 

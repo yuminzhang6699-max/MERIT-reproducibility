@@ -27,7 +27,7 @@
       "required": ["total_length", "n_channels", "sampling_rate", "difficulty", "needle_ratio"],
       "additionalProperties": false,
       "properties": {
-        "total_length": {"enum": [1001, 3001, 5001, 10001], "description": "Actual sample count N; difficulty uses L=N-1 intervals."},
+        "total_length": {"enum": [1001, 3001, 5001, 10001], "description": "Actual sample count T; difficulty uses L=T-1 intervals."},
         "n_channels": {"enum": [7, 8]},
         "sampling_rate": {"type": "string"},
         "difficulty": {"enum": ["easy", "medium", "hard", "expert"]},

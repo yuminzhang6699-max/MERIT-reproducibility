@@ -6,6 +6,6 @@
 
 请从[复现指南](reproducibility/README.md)开始。无需GPU即可下载固定版本、验证1716条时序和8412个QA，并从公开原始QA重新打包得到与已发布test逐字节相同的文件。
 
-关键澄清：采样点数N=生成间隔数L+1；难度按L计算，保存的total_length为N；事件区间为零起点左闭右开[start,end)。当前发布版只有统一test，不采用旧版train/val/test划分脚本。
+关键澄清：采样点数T=生成间隔数L+1；难度按L计算，保存的total_length为T；事件区间为零起点左闭右开[start,end)。当前发布版只有统一test，不采用旧版train/val/test划分脚本。
 
 原项目文档保存在[UPSTREAM_README.zh-CN.md](UPSTREAM_README.zh-CN.md)。

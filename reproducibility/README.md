@@ -57,6 +57,6 @@ The downloader checks the fixed remote Git/LFS content identities. `verify.py --
 
 ## Length clarification
 
-Let **N** be the number of sampled observations and **L=N−1** the number of sampling intervals. The generator specifies an end time `start + L × sampling_interval`, and the timestamp generator includes both endpoints. Consequently, L∈{1000,3000,5000,10000} produces N∈{1001,3001,5001,10001}.
+Let **T** be the number of sampled observations and **L=T−1** the number of sampling intervals, so **T=L+1**. **N** denotes the number of sensors (channels). The generator specifies an end time `start + L × sampling_interval`, and the timestamp generator includes both endpoints. Consequently, L∈{1000,3000,5000,10000} produces T∈{1001,3001,5001,10001}.
 
-The saved `metadata.total_length` contains N, while the existing difficulty classifier was called with L. Easy therefore means **L≤1000**, including the released N=1001 samples. This is an interval-count/sample-count naming distinction, not an undocumented additional Easy dataset. The exact conditions and observed counts are in [SPLITS_AND_DIFFICULTY.md](SPLITS_AND_DIFFICULTY.md).
+The saved `metadata.total_length` contains T, while the existing difficulty classifier was called with L. Easy therefore means **L≤1000**, including the released T=1001 samples. This is an interval-count/sample-count naming distinction, not an undocumented additional Easy dataset. The exact conditions and observed counts are in [SPLITS_AND_DIFFICULTY.md](SPLITS_AND_DIFFICULTY.md).
